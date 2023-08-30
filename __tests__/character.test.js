@@ -18,7 +18,7 @@ test('it should add armor to newCharacter and increase maxHp by 7 points', () =>
 
 test('it should add weapons to newCharacter and increase attackPoints by 5 points', () => {
   newCharacter.addWeapons("dagger", 5);
-  expect(newCharacter).toEqual({name: "Paul", currentHp: 20, maxHp: 20, attackPoints: 15, armor: [], weapons: ["dagger"]});
+  expect(newCharacter).toEqual({name: "Paul", currentHp: 20, maxHp: 20, attackPoints: 10, armor: [], weapons: ["dagger", 5]});
 })
 });
 

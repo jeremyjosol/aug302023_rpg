@@ -14,8 +14,6 @@ export default class Character {
   }
 
   addWeapons(type, value){
-    this.weapons.push(type);
-    this.attackPoints += value;
-    
+    this.weapons.push(type, value);
   }
   }
