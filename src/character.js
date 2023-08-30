@@ -5,10 +5,17 @@ export default class Character {
     this.maxHp = maxHp;
     this.attackPoints = attackPoints;
     this.armor = [];
+    this.weapons = [];
   }
   
   addArmor(type, value){
     this.armor.push(type);
     this.maxHp += value;
+  }
+
+  addWeapons(type, value){
+    this.weapons.push(type);
+    this.attackPoints += value;
+    
   }
   }
