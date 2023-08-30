@@ -2,10 +2,16 @@ import Character from './../src/character.js';
 
 describe('Character', () => {
 let newCharacter;
+let newCharacter2;
 
 beforeEach(() => {
   newCharacter = new Character("Paul", 20, 20, 10);
+  newCharacter2 = new Character("Seth", 20, 20, 10);
 });
+
+// beforeEach(() => {
+//   newCharacter = new Character("Jeremy", 20, 20, 10);
+// });
 
 test('it should return the properties of the Character class', () => {
   expect(newCharacter).toEqual({name: "Paul", currentHp: 20, maxHp: 20, attackPoints: 10, armor: [], weapons: []});
@@ -20,6 +26,8 @@ test('it should add weapons to newCharacter and increase attackPoints by 5 point
   newCharacter.addWeapons("dagger", 5);
   expect(newCharacter).toEqual({name: "Paul", currentHp: 20, maxHp: 20, attackPoints: 10, armor: [], weapons: ["dagger", 5]});
 })
+
+
 });
 
 
