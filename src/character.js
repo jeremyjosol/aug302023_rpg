@@ -1,7 +1,8 @@
 export default class Character {
-  constructor(name, armor, weapon){
+  constructor(name, currentHp, maxHp, attackPoints){
     this.name = name;
-    this.armor = armor;
-    this.weapon = weapon;
+    this.currentHp = currentHp;
+    this.maxHp = maxHp;
+    this.attackPoints = attackPoints;
   }
 }
