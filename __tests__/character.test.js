@@ -33,9 +33,20 @@ test('it should be able to assign a currentWeapon property to the character and 
   expect(paulsCharacter).toEqual({name: "Paul", currentHp: 100, maxHp: 100, baseAttackPoints: 10, attackPoints: 17, armor: [], weapons: ["sword", 10 ,"knife", 7, "chicken", 5], currentWeapon: "knife"});
 });
 
-test('it should decrement jeremysCharacter hp based off paulsCharacter attack points', () => {
-  paulsCharacter.attackEnemy(jeremysCharacter);
-  expect(jeremysCharacter).toEqual({name: "Jeremy", currentHp: 90, maxHp: 100, baseAttackPoints: 10, attackPoints: 10, armor: [], weapons: ["sword", 10 ,"knife", 7, "chicken", 5]});
+// test('it should decrement jeremysCharacter hp based off paulsCharacter attack points', () => {
+//   paulsCharacter.attackEnemy(jeremysCharacter);
+//   expect(jeremysCharacter).toEqual({name: "Jeremy", currentHp: 90, maxHp: 100, baseAttackPoints: 10, attackPoints: 10, armor: [], weapons: ["sword", 10 ,"knife", 7, "chicken", 5]});
+// });
+
+// test('it should return the value of attackMult as null', () => {
+//   let ranNum = ranNum();
+//   expect(ranNum).toEqual(null);
+// });
+
+test('it should return a value that is defined', () => {
+  let ranNumValue = paulsCharacter.ranNum();
+  expect(ranNumValue).toBeGreaterThan(0);
+  expect(ranNumValue).toBeLessThan(21);
 });
 
 });

@@ -28,10 +28,41 @@ export default class Character {
     this.attackPoints += this.weapons[index + 1];
   }
 
-  attackEnemy(char2) {
-    char2.currentHp -= this.attackPoints;
+  ranNum(){
+    let ranNumValue = Math.floor(Math.random() * 20) + 1;
+    return ranNumValue;
+  }
+
+
+//   attackMult() {
+//     let ranNumValue = this.ranNum();
+//     let attackMult = null;
+    
+//     if (ranNumValue >= 15 && ranNumValue <= 20) {
+//       attackMult = 1.5;
+//     } else if (ranNumValue >= 10 && ranNumValue < 15) {
+//       attackMult = 1;
+//     } else {
+//       attackMult = 0;
+//   }
+//       return attackMult;
+// }
+
+  // attackEnemy(char) {
+  //   let attackMult = this.ranNum();
+  //     char.currentHp -= this.attackPoints * attackMult;
+  //   } 
 }
-}
+
+
+//   attackEnemy(char2) {
+//     let ranNum = Math.floor(Math.random() * 20) + 1;
+//     console.log(ranNum);
+//     if (ranNum >= 10) {
+//       char2.currentHp -= this.attackPoints;
+//     } 
+//   }
+// }
   // equipWeapon(index) {
   //   if (index >= 0 && index < this.weapons.length) {
   //     let attackPoints = 5;
