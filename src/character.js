@@ -17,8 +17,9 @@ export default class Character {
     this.weapons.push(type);
     // this.currentWeapon = this.weapons;
   }
-  switchWeapons(index){
+  equipWeapon(index, value){
     this.currentWeapon = this.weapons[index];
+    this.attackPoints += value;
   }
 }
 

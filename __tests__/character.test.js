@@ -26,11 +26,9 @@ test('it should add weapons to newCharacter and increase attackPoints by 5 point
 });
 
 test('it should be able to assign a currentWeapon property to the character and assign a value based on the weapons array', () => {
-  newCharacter.switchWeapons(0);
-  expect(newCharacter).toEqual({name: "Paul", currentHp: 20, maxHp: 20, attackPoints: 10, armor: [], weapons: ["sword", "knife", "chicken"], currentWeapon: "sword"});
-
+  newCharacter.equipWeapon(0, 10);
+  expect(newCharacter).toEqual({name: "Paul", currentHp: 20, maxHp: 20, attackPoints: 20, armor: [], weapons: ["sword", "knife", "chicken"], currentWeapon: "sword"});
 });
-
 });
 
 
