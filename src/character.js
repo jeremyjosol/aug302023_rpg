@@ -1,10 +1,10 @@
 console.log("hello");
 
 export default class Character {
-  constructor(name, currentHp, maxHp, baseAttackPoints){
+  constructor(name, baseAttackPoints){
     this.name = name;
-    this.currentHp = currentHp;
-    this.maxHp = maxHp;
+    this.maxHp = 100;
+    this.currentHp = this.maxHp;
     this.baseAttackPoints = baseAttackPoints;
     this.attackPoints = baseAttackPoints;
     this.armor = [];
@@ -14,6 +14,7 @@ export default class Character {
   addArmor(type, value){
     this.armor.push(type);
     this.maxHp += value;
+    this.currentHp += value;
   }
 
   addWeapons(type, value){
@@ -26,8 +27,11 @@ export default class Character {
     this.attackPoints = this.baseAttackPoints;
     this.attackPoints += this.weapons[index + 1];
   }
-}
 
+  attackEnemy(char2) {
+    char2.currentHp -= this.attackPoints;
+}
+}
   // equipWeapon(index) {
   //   if (index >= 0 && index < this.weapons.length) {
   //     let attackPoints = 5;
