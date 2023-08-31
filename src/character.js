@@ -6,7 +6,6 @@ export default class Character {
     this.attackPoints = attackPoints;
     this.armor = [];
     this.weapons = ["sword", "knife", "chicken"];
-    this.currentWeapon = "knife";
   }
   
   addArmor(type, value){
@@ -16,7 +15,12 @@ export default class Character {
 
   addWeapons(type){
     this.weapons.push(type);
-  }}
+    // this.currentWeapon = this.weapons;
+  }
+  switchWeapons(index){
+    this.currentWeapon = this.weapons[index];
+  }
+}
 
   // equipWeapon(index) {
   //   if (index >= 0 && index < this.weapons.length) {
