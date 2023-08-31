@@ -30,23 +30,24 @@ export default class Character {
 
   ranNum(){
     let ranNumValue = Math.floor(Math.random() * 20) + 1;
+    console.log(ranNumValue);
     return ranNumValue;
   }
 
 
-//   attackMult() {
-//     let ranNumValue = this.ranNum();
-//     let attackMult = null;
+  attackMult(ranNumValue) {
+    // let ranNumValue = this.ranNum();
+    let attackMult = null;
     
-//     if (ranNumValue >= 15 && ranNumValue <= 20) {
-//       attackMult = 1.5;
-//     } else if (ranNumValue >= 10 && ranNumValue < 15) {
-//       attackMult = 1;
-//     } else {
-//       attackMult = 0;
-//   }
-//       return attackMult;
-// }
+    if (ranNumValue >= 15 && ranNumValue <= 20) {
+      attackMult = 1.5;
+    } else if (ranNumValue >= 10 && ranNumValue < 15) {
+      attackMult = 1;
+    } else {
+      attackMult = 0;
+  }
+      return attackMult;
+}
 
   // attackEnemy(char) {
   //   let attackMult = this.ranNum();

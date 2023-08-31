@@ -38,10 +38,6 @@ test('it should be able to assign a currentWeapon property to the character and 
 //   expect(jeremysCharacter).toEqual({name: "Jeremy", currentHp: 90, maxHp: 100, baseAttackPoints: 10, attackPoints: 10, armor: [], weapons: ["sword", 10 ,"knife", 7, "chicken", 5]});
 // });
 
-// test('it should return the value of attackMult as null', () => {
-//   let ranNum = ranNum();
-//   expect(ranNum).toEqual(null);
-// });
 
 test('it should return a value that is defined', () => {
   let ranNumValue = paulsCharacter.ranNum();
@@ -49,6 +45,24 @@ test('it should return a value that is defined', () => {
   expect(ranNumValue).toBeLessThan(21);
 });
 
+test('it should return the value of the attackMult function when the roll is greater than 14', () => {
+  // let attackMult = paulsCharacter.attackMult();
+  let ranNumValue = paulsCharacter.attackMult(17);
+  expect(ranNumValue).toEqual(1.5);
+});
+
+test('it should return the value of the attackMult function when the roll is greater than 9 and less than 15', () => {
+  // let attackMult = paulsCharacter.attackMult();
+  let ranNumValue = paulsCharacter.attackMult(11);
+  expect(ranNumValue).toEqual(1);
+});
+
+test('it should return the value of the attackMult function when the roll is less than 10', () => {
+// let attackMult = paulsCharacter.attackMult();
+let ranNumValue = paulsCharacter.attackMult(6);
+expect(ranNumValue).toEqual(0);
+
+});
 });
 
 // describe('Constructor', () => {}
